@@ -1,0 +1,14 @@
+namespace NoticiasApp.Models
+{
+    public class Noticia
+    {
+        public int id { get; set; }
+        public string titulo { get; set; }
+        public string contenido { get; set; }
+
+        public int UsuarioId { get; set; }
+        public Usuario Usuario { get; set; }
+
+        public ICollection<Comentario> Comentarios { get; set; }
+    }
+}
